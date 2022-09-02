@@ -1,0 +1,40 @@
+ion-content {
+  --background: var(--ion-color-light);
+}
+.view-property {
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 12px;
+}
+.topic-subtitle {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.property-title {
+  display: flex;
+  align-items: center;
+}
+.reply-to-btn {
+  padding: 0;
+  font-size: 16px;
+  color: var(--ion-color-primary);
+  background-color: transparent;
+  max-width: 400px;
+}
+
+.details-container {
+  height: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  height: 100%;
+  .enquiry-content {
+    background-color: var(--ion-color-light-tint);
+    padding: 1rem;
+    min-height: fit-content;
+  }
+}
+
+ion-button {
+  --box-shadow: none;
+}

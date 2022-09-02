@@ -1,0 +1,98 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title>Enquiry Detail</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="location.back()">
+        <ion-icon name="arrow-back-outline" style="font-size: 28px"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" *ngIf="enquiry">
+  <div class="details-container">
+    <ion-card class="ion-no-padding">
+      <ion-card-header>
+        <ion-card-title color="dark" class="property-title">
+          {{ enquiry.property?.name }}
+          <ion-button
+            size="small"
+            fill="outline"
+            class="view-property"
+            (click)="gotToProperty(enquiry.property.property_id)"
+          >
+            View Property
+          </ion-button>
+        </ion-card-title>
+
+        <ion-card-subtitle class="ion-text-capitalize topic-subtitle">
+          Topic -
+          <ion-badge color="primary">{{ enquiry.topic }}</ion-badge>
+        </ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle class="ion-text-capitalize" *ngIf="enquiry.replyTo">
+          <button
+            class="reply-to-btn ellipsis"
+            (click)="goToEnquiry(enquiry.replyTo.enquiry_id)"
+          >
+            <ion-icon name="arrow-redo" color="primary"></ion-icon>
+            [Response to] - {{ enquiry.replyTo.title }} sdsadasdaadasda ada dasd
+            das da d
+          </button>
+        </ion-card-subtitle>
+
+        <ion-card-title>
+          {{ enquiry.title }}
+        </ion-card-title>
+        <ion-card-subtitle> {{ enquiry.createdAt | date }}</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <div class="enquiry-content">
+          <markdown [data]="enquiry.content"></markdown>
+        </div>
+
+        <div class="ion-padding">
+          - {{ enquiry.email }}
+          <span *ngIf="sentByMe()">(You)</span>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <div style="margin-left: 8px">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-button
+              color="light"
+              (click)="createEnquiryModal()"
+              *ngIf="!sentByMe()"
+            >
+              <ion-icon name="create-outline"></ion-icon>
+              Reply
+            </ion-button>
+          </ion-col>
+          <ion-col class="ion-text-right">
+            <ion-button
+              color="light"
+              (click)="report(enquiry.enquiry_id)"
+              *ngIf="!sentByMe()"
+            >
+              <ion-icon name="flag-outline" color="danger"></ion-icon>
+              <ion-text color="danger"> Report </ion-text>
+            </ion-button>
+
+            <ion-button color="light" (click)="delete(enquiry.enquiry_id)">
+              <ion-icon name="trash-outline" color="danger"></ion-icon>
+              <ion-text color="danger"> Delete </ion-text>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+</ion-content>

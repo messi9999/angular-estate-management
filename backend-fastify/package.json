@@ -1,0 +1,37 @@
+{
+  "name": "real-estate-management-backend",
+  "version": "1.0.0",
+  "description": "The server side for real-estate-management app",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "db:seeder": "node src/database-seeder/index.js"
+  },
+  "keywords": [
+    "fastify",
+    "real-estate-management"
+  ],
+  "author": "eevan7a9",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/cors": "^8.3.0",
+    "@fastify/jwt": "^7.1.0",
+    "@fastify/multipart": "^7.7.0",
+    "@fastify/static": "^6.10.2",
+    "@fastify/swagger": "^7.6.1",
+    "@fastify/websocket": "^7.2.0",
+    "@types/mongoose": "^5.11.97",
+    "dotenv": "^16.3.1",
+    "fastify": "^4.18.0",
+    "fastify-bcrypt": "^1.0.1",
+    "mongoose": "^7.3.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/busboy": "^0.3.1",
+    "nodemon": "^2.0.12"
+  }
+}

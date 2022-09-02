@@ -1,0 +1,89 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Sign In Page</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="signin-container">
+    <ion-card class="signin-card">
+      <ion-card-header class="ion-text-center">
+        <div class="logo-container">
+          <img src="../assets/images/logo.png" alt="logo" />
+          <div class="source"></div>
+        </div>
+      </ion-card-header>
+      <ion-card-content>
+        <form [formGroup]="signinForm" (submit)="submit()">
+          <ion-list>
+            <ion-item>
+              <ion-label position="floating">Email</ion-label>
+              <ion-input type="email" formControlName="email"></ion-input>
+            </ion-item>
+            <div
+              class="alert-errors"
+              *ngIf="error && signinForm.get('email').errors"
+            >
+              <app-alert-card content="Email is not valid."></app-alert-card>
+            </div>
+            <ion-item>
+              <ion-label position="floating">Password</ion-label>
+              <ion-input type="password" formControlName="password"></ion-input>
+            </ion-item>
+            <div class="alert-errors" *ngIf="authFailed">
+              <app-alert-card
+                content="Wrong Email or Password."
+              ></app-alert-card>
+            </div>
+
+            <ion-button
+              size="large"
+              class="ion-margin-top"
+              expand="full"
+              color="primary"
+              type="submit"
+            >
+              Sign In
+            </ion-button>
+
+            <div class="ion-margin-vertical ion-text-center" *ngIf="showSocial">
+              OR
+            </div>
+
+            <div class="social-container" *ngIf="showSocial">
+              <!--
+              <div
+                id="g_id_onload"
+                data-client_id="GOOGLE.AUTH.CLIENT.ID"
+                data-context="signin"
+                data-ux_mode="popup"
+                data-login_uri="http://localhost:8100/user/signin"
+                data-auto_prompt="false"
+              ></div>
+              -->
+              <div
+                class="g_id_signin"
+                data-type="standard"
+                data-shape="rectangular"
+                data-theme="outline"
+                data-text="signin_with"
+                data-size="large"
+                data-logo_alignment="left"
+                id="web-google-button"
+                data-width="300px"
+              ></div>
+            </div>
+
+            <div class="ask-register">
+              First time here? <a [routerLink]="['/user/register']">Register</a>
+            </div>
+          </ion-list>
+        </form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <app-footer></app-footer>
+</ion-content>

@@ -1,4 +1,4 @@
-# real-estate-management
+<!-- # real-estate-management
 
 A online property management solution for real estate and
 physical property management. This can include residential,
@@ -119,4 +119,4 @@ dummy user:
 /auth/
 /properties/
 /enquiries/
-```
+``` -->

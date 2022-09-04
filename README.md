@@ -112,11 +112,11 @@ dummy user:
 
   You can use this to signin.
 ```
-## Routes
+<!-- ## Routes
 ```
 /docs/
 /users/
 /auth/
 /properties/
 /enquiries/
-```
+``` -->

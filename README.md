@@ -111,7 +111,7 @@ dummy user:
   password: "password"
 
   You can use this to signin.
-<!-- ```
+```
 ## Routes
 ```
 /docs/
@@ -119,4 +119,4 @@ dummy user:
 /auth/
 /properties/
 /enquiries/
-``` -->
+```

@@ -93,7 +93,7 @@ $ npm start `or` $ npm run dev
 
 ```
 
-<!-- ### **2.1 Database seeder(optional)**
+### **2.1 Database seeder(optional)**
 - Make sure `.env` is configured & dependencies are installed
 - Will populate database with dummy data.
 
@@ -119,4 +119,4 @@ dummy user:
 /auth/
 /properties/
 /enquiries/
-``` -->
+```

@@ -1,4 +1,4 @@
 git status
 git add .
-git commit --date="291 day ago" -m "tst"
+git commit --date="290 day ago" -m "helslo"
 git push origin main

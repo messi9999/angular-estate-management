@@ -2,15 +2,15 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-export const environment = {
-  production: false,
-  api: {
-    server: 'http://localhost:8000/',
-    mapKey: '',
-    googleAuthClientId: '',
-    webSocketUrl: "ws://localhost:8000/websocket"
-  }
-};
+// export const environment = {
+//   production: false,
+//   api: {
+//     server: 'http://localhost:8000/',
+//     mapKey: '',
+//     googleAuthClientId: '',
+//     webSocketUrl: "ws://localhost:8000/websocket"
+//   }
+// };
 
 /*
  * For easier debugging in development mode, you can import the following file

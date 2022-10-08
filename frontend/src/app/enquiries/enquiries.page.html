@@ -24,17 +24,17 @@
               [(ngModel)]="filterBy"
               (ionChange)="enquiriesList.setFilters(filterBy)"
             >
-              <!-- <ion-select-option
+              <ion-select-option
                 *ngFor="let filter of filters"
                 [value]="filter.value"
               >
                 {{filter.label}}
-              </ion-select-option> -->
+              </ion-select-option>
             </ion-select>
           </ion-item>
         </ion-col>
 
-        <ion-col size="12" sizeMd="6">
+        <!-- <ion-col size="12" sizeMd="6">
           <ion-item lines="none">
             <ion-label>Sort by:</ion-label>
             <ion-select
@@ -50,7 +50,7 @@
                 {{ sort.label}}
               </ion-select-option>
             </ion-select>
-          </ion-item>
+          </ion-item> -->
         </ion-col>
       </ion-row>
     </ion-grid>

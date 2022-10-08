@@ -1,5 +1,5 @@
 clear
 git status
 git add .
-git commit --date="265 day ago" -m "icon buttons"
+git commit --date="265 day ago" -m "headlines"
 git push origin main

@@ -34,7 +34,7 @@
           </ion-item>
         </ion-col>
 
-        <!-- <ion-col size="12" sizeMd="6">
+        <ion-col size="12" sizeMd="6">
           <ion-item lines="none">
             <ion-label>Sort by:</ion-label>
             <ion-select
@@ -50,7 +50,7 @@
                 {{ sort.label}}
               </ion-select-option>
             </ion-select>
-          </ion-item> -->
+          </ion-item>
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -58,13 +58,13 @@
 </ion-header>
 
 <ion-content>
-  <div class="security-container" *ngIf="!user">
+  <!-- <div class="security-container" *ngIf="!user">
     <div class="content">
       <h1 class="security-heading">HOLD UP!!!</h1>
       <h4 class="security-sub-heading">YOU NEED TO SIGN IN TO CONTINUE</h4>
       <ion-button routerLink="/user/signin" size="large"> SIGN IN </ion-button>
     </div>
-  </div>
+  </div> -->
 
   <div class="enquiries-container" *ngIf="user">
     <ion-progress-bar
